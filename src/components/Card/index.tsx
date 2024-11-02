@@ -17,7 +17,13 @@ export const Card = (props: IProduto) => {
             <Title>{props.nome}</Title>
             <TitlePreco>{props.valor}</TitlePreco>
             <TextPromo>{props.promo}</TextPromo>
-            <Button>
+            <Button
+                onClick={() => {
+                    return(
+                        
+                    )
+                }}
+            >
                 <TextButton>Detalhes</TextButton>
             </Button>
         </CardBody>

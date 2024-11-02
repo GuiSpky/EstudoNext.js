@@ -9,7 +9,7 @@ interface IReqProduto {
 
 export default async function Home() {
 
-  const {data}: IReqProduto = await axios.get('http://localhost:3001/produtos')
+  const {data}: IReqProduto = await axios.get(process.env.NEXT_PUBLIC_API_URL + '/produtos')
 
 
   return (

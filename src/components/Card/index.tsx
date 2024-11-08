@@ -2,10 +2,15 @@
 import Image from "next/image"
 import { Button, CardBody, TextButton, TextPromo, Title, TitlePreco } from "./style"
 import { IProduto } from "@/interfaces"
+import { useReducer } from "react"
+import { useRouter } from "next/navigation"
 
 
 
 export const Card = (props: IProduto) => {
+
+    const router = useRouter()
+
     return(
         <CardBody>
             <Image 
@@ -19,9 +24,7 @@ export const Card = (props: IProduto) => {
             <TextPromo>{props.promo}</TextPromo>
             <Button
                 onClick={() => {
-                    return(
-                        
-                    )
+                    router.push('/produto/'+props.id)
                 }}
             >
                 <TextButton>Detalhes</TextButton>
